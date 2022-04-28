@@ -1,15 +1,22 @@
-.homeBody {
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 1vmax;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.home-body {
   background-color: lightgreen;
 }
 
-.formBody {
-  background-color: lightblue;
-}
-
-.homeWrapper {
+.home-wrapper {
   color: lightseagreen;
-}
-
-.formWrapper {
-  border: 1px solid black;
 }
