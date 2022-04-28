@@ -6,7 +6,6 @@
   <title></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="manifest" href="site.webmanifest">
 
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/secondForm.css">
@@ -19,11 +18,11 @@
     <a href="/">Hem</a>
     <a href="/form1">Formulär 1</a>
     <div class="input-wrapper">
-      <form action="">
-        <label for="f-name">First name:</label>
-        <input type="text" id="f-name" name="f-name" placeholder="Picke" minlength="3" maxlength="20" required><br><br>
-        <label for="l-name">Last name:</label>
-        <input type="text" id="l-name" name="l-name" placeholder="Lordgren"><br><br>
+      <form action="/save" method="POST">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" placeholder="Picke" minlength="3" maxlength="20" required><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" placeholder="Lordgren"><br><br>
         <input type="radio" id="html" name="fav_language" value="HTML">
         <label for="html">HTML</label><br>
         <input type="radio" id="css" name="fav_language" value="CSS">
