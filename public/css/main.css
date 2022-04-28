@@ -1,0 +1,15 @@
+.homeBody {
+  background-color: lightgreen;
+}
+
+.formBody {
+  background-color: lightblue;
+}
+
+.homeWrapper {
+  color: lightseagreen;
+}
+
+.formWrapper {
+  border: 1px solid black;
+}
