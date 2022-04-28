@@ -19,7 +19,26 @@
     <a href="/form2">Formulär 2</a>
     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">Input typer</a>
     <div class="input-wrapper">
+      <form action="/save" method="POST">
+        <select name="favourite-lang" id="favourite-lang">
+          <option value="HTML">Select a Language</option>
+          <option value="HTML">HTML</option>
+          <option value="CSS">CSS</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="React">React</option>
+        </select><br><br>
 
+        <input type="checkbox" id="agreed" name="agreed" />
+        <label for="agreed">Agreed</label><br><br>
+
+        <input type="checkbox" id="isOk" name="isOk" />
+        <label for="isOk">OK</label><br><br>
+
+        <input type="date" id="datum" name="datum" />
+        <label for="datum">Datum</label><br><br>
+
+        <input type="submit" value="Submit">
+      </form>
     </div>
   </div>
 

@@ -22,6 +22,9 @@ app.get('/', (request, response) => {
 });
 
 app.post('/save', (req, res) => {
+
+  //Det är här man skriver koden för att convertera datan till PDF
+
   console.log('POSTED FROM CLIENT: ', req.body);
   res.redirect('/');
   return;
