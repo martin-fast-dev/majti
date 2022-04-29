@@ -1,8 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const fs = require('fs');
+const pdf = require('html-pdf');
 
-const PORT = 3000;
+const PORT = 4000;
 const app = express();
 
 app.use(express.static(path.join(__dirname, '/public')));
@@ -24,10 +26,22 @@ app.get('/', (request, response) => {
 app.post('/save', (req, res) => {
 
   //Det är här man skriver koden för att convertera datan till PDF
+  //En html template som fylls med datan från req.body converteras till PDF
 
-  console.log('POSTED FROM CLIENT: ', req.body);
-  res.redirect('/');
-  return;
+  const html = fs.readFileSync(path.join(__dirname, '/public/constructor_template.html'), 'utf8');
+  const options = { format: 'A4' };
+
+  (async function run(){
+    await pdf.create(html, options).toFile('../tornado.pdf', function(err, res) {
+      if (err) return console.log(err);
+      console.log(res);
+    });
+
+    console.log('POSTED FROM CLIENT: ', req.body);
+    res.sendFile(path.join(__dirname, '../tornado.pdf'));
+    return;
+  }());
+
 });
 
 app.listen(PORT, () => {
