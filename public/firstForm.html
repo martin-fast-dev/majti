@@ -1,48 +1,126 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="">
-
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/firstForm.css">
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/firstForm.css" />
 
-  <meta name="theme-color" content="#fafafa">
+  <meta name="theme-color" content="#fafafa" />
 </head>
+
 <body class="form-body">
   <div class="form-wrapper">
-    <h1>Formulär 1</h1>
     <a href="/">Hem</a>
     <a href="/form2">Formulär 2</a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">Input typer</a>
     <div class="input-wrapper">
       <form action="/save" method="POST">
-        <select name="favourite-lang" id="favourite-lang">
-          <option value="HTML">Select a Language</option>
-          <option value="HTML">HTML</option>
-          <option value="CSS">CSS</option>
-          <option value="JavaScript">JavaScript</option>
-          <option value="React">React</option>
-        </select><br><br>
+        <h1>TORNADO TC1000-1100-1200</h1>
 
-        <input type="checkbox" id="agreed" name="agreed" />
-        <label for="agreed">Agreed</label><br><br>
+        <section id="info">
+          <h3>Maskin information</h3>
 
-        <input type="checkbox" id="isOk" name="isOk" />
-        <label for="isOk">OK</label><br><br>
+          <label for="date">Datum:</label>
+          <input type="date" id="date" name="date" /><br /><br />
 
-        <input type="date" id="datum" name="datum" />
-        <label for="datum">Datum</label><br><br>
+          <label for="client">Kund:</label>
+          <input type="text" id="client" name="client" required /><br /><br />
 
-        <input type="submit" value="Submit">
+          <label for="model">Modell:</label>
+          <input type="text" id="model" name="model" required /><br /><br />
+
+          <label for="nbr-of-starts">Antal Starter:</label>
+          <input type="text" id="nbr-of-starts" name="nbr-of-starts" required /><br /><br />
+
+          <label for="unit-nbr">Maskin nr:</label>
+          <input type="text" id="unit-nbr" name="unit-nbr" required /><br /><br />
+
+          <div>Underhåll:</div>
+          <label for="preventive">Förebyggande</label>
+          <input type="radio" id="preventive" name="maintenance" value="preventive" />
+          <label for="acute">Akut</label>
+          <input type="radio" id="acute" name="maintenance" value="acute" /><br /><br />
+
+          <div>Besiktning:</div>
+          <label for="takeover">Övertagande</label>
+          <input type="radio" id="takeover" name="inspection" value="takeover" />
+          <label for="check">Kontroll</label>
+          <input type="radio" id="check" name="inspection" value="check" /><br /><br />
+
+          <label for="satisfaction">Kundnöjdhet:</label>
+          <select name="satisfaction" id="satisfaction">
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+          </select><br /><br />
+
+          <label for="comment">Övrigt:</label><br />
+          <textarea name="comment" id="comment" cols="50" rows="5"></textarea><br /><br />
+        </section>
+        <section id="kap-2">
+          <details>
+            <summary>
+              <span>Visuell inspektion / Kontroll (Kapitel 2)</span>
+              <span class="progress-labels">
+                <span>OK</span>
+                <span>Fixat</span>
+                <span>Separat</span>
+                <span>Excluderat</span>
+              </span>
+            </summary>
+
+            <div class="chapter-row">
+              <span>Beklädnad, arbetsöppning samt dörr:</span>
+              <input type="radio" name="coating-doors" id="ok" value="ok" />
+              <input type="radio" name="coating-doors" id="fixed" value="fixed" />
+              <input type="radio" name="coating-doors" id="separate" value="separate" />
+              <input type="radio" name="coating-doors" id="not-included" value="not-included" /><br />
+            </div>
+
+            <div class="chapter-row">
+              <span>Inspektion undermaskin / öppning:</span>
+              <input type="radio" name="undercarriage" id="ok" value="ok" />
+              <input type="radio" name="undercarriage" id="fixed" value="fixed" />
+              <input type="radio" name="undercarriage" id="separate" value="separate" />
+              <input type="radio" name="undercarriage" id="not-included" value="not-included" /><br />
+            </div>
+
+            <div class="chapter-row">
+              <span>Kabeldragning inne i maskinen:</span>
+              <input type="radio" name="cables" id="ok" value="ok" />
+              <input type="radio" name="cables" id="fixed" value="fixed" />
+              <input type="radio" name="cables" id="separate" value="separate" />
+              <input type="radio" name="cables" id="not-included" value="not-included" /><br />
+            </div>
+
+            <div class="chapter-row">
+              <span>Palletter och bärvinklar:</span>
+              <input type="radio" name="pallettes" id="ok" value="ok" />
+              <input type="radio" name="pallettes" id="fixed" value="fixed" />
+              <input type="radio" name="pallettes" id="separate" value="separate" />
+              <input type="radio" name="pallettes" id="not-included" value="not-included" /><br />
+            </div>
+
+            <div class="chapter-row">
+              <span>PC skärm, tangentbord och mus:</span>
+              <input type="radio" name="peripheral" id="ok" value="ok" />
+              <input type="radio" name="peripheral" id="fixed" value="fixed" />
+              <input type="radio" name="peripheral" id="separate" value="separate" />
+              <input type="radio" name="peripheral" id="not-included" value="not-included" /><br />
+            </div>
+
+          </details>
+        </section>
+        <input id="submit-button" type="submit" value="Submit" />
       </form>
     </div>
   </div>
 
   <script src="js/main.js"></script>
 </body>
-
 </html>
